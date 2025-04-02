@@ -3,20 +3,22 @@ let adj = ['great', 'big'];
 let noun = ['jogger', 'racoon'];
 let domain = ['.com', '.net', '.us', '.io'];
 
-const myDomain = [];
 
-function createMyDomain (arr1, arr2, arr3, arr4){
-    for(let i = 0; i < pronoun.length; i++){
-        myDomain.push(item);
-        for(let i = 0; i < adj.length; i++){
-            myDomain.push(item);
-            for(let i = 0; i = noun.length; i++){
-                myDomain.push(item);
-                for(let i = 0; i = domain.length; i++){
-                    myDomain.push(item);
+
+function createMyDomain(arr1, arr2, arr3, arr4) {
+    let myDomain = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            for (let k = 0; k < arr3.length; k++) {
+                for (let l = 0; l < arr4.length; l++) {
+                    myDomain.push(arr1[i] + arr2[j] + arr3[k] + arr4[l]);
                 }
             }
         }
     }
+
+    return myDomain;
 }
-console.log(createMyDomain);
+
+console.log(createMyDomain(pronoun, adj, noun, domain));
